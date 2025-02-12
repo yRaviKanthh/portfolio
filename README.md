@@ -16,10 +16,7 @@ The portfolio reflects my expertise in programming languages, frameworks, tools,
 - Software Development (Web & Mobile)
 - Cybersecurity & Network Analysis
 - Machine Learning
-
-## 📅 Work Experience & Education
-This section covers my professional experience, internships, and academic background, demonstrating my learning and career growth.
-
+  
 ## 📫 Get in Touch
 For collaboration, discussions, or inquiries, feel free to explore the portfolio and connect with me via the provided contact information.
 
