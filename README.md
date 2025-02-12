@@ -15,8 +15,7 @@ This portfolio includes projects spanning multiple disciplines such as web devel
 The portfolio reflects my expertise in programming languages, frameworks, tools, and security practices. It includes my proficiency in:
 - Software Development (Web & Mobile)
 - Cybersecurity & Network Analysis
-- DevOps & Cloud Technologies
-- Data Science & Machine Learning
+- Machine Learning
 
 ## 📅 Work Experience & Education
 This section covers my professional experience, internships, and academic background, demonstrating my learning and career growth.
