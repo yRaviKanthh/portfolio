@@ -56,7 +56,7 @@ h2 {
   margin-top: -10px; /* Moves it up */
   font-size: clamp(1.8rem, 4vw, 2.8rem);
   font-family: "Satoshi 700";
-  text-align: center;
+  text-align: left;
 }
 
 h3 {
