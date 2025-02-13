@@ -1257,66 +1257,78 @@ a:hover {
 
 
 
+/* Ensure heading is always visible */
 h2 {
-  margin: 0;
-  font-size: clamp(1.8rem, 4vw, 2.8rem); /* Adjusts size based on screen width */
-  font-family: "Satoshi 700";
-  text-align: left;
-  margin-top: -80px; /* Adjusted to be less negative for better positioning */
+    margin: 0;
+    font-size: clamp(1.8rem, 4vw, 2.8rem); /* Adjusts dynamically */
+    font-family: "Satoshi 700", sans-serif;
+    text-align: center; /* Ensures visibility */
+    margin-top: 10px; /* Push down slightly */
+    color: black !important; /* Ensure text is visible */
+    z-index: 10;
 }
 
-/* Ensures consistent spacing and alignment */
+/* Parent container must have space */
+.featured-projects-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100px; /* Ensure enough height */
+    overflow: visible !important; /* Prevents clipping */
+}
+
+/* Ensures the separator line is always visible */
 .separator {
-  position: relative;
-  align-self: flex-start;
-  margin-bottom: 10px;
+    position: relative;
+    align-self: center; /* Center it */
+    margin-bottom: 15px;
 }
 
-/* Underline effect for heading */
+/* Underline effect */
 .separator::after {
-  content: "";
-  position: absolute;
-  bottom: -8px; /* Moves line closer to text */
-  left: 0;
-  width: 6rem;
-  height: 0.5rem;
-  border-radius: 3.5rem;
-  background-color: rgb(31, 165, 218);
+    content: "";
+    position: absolute;
+    bottom: -5px; /* Adjusted for visibility */
+    left: 50%;
+    transform: translateX(-50%); /* Centering */
+    width: 6rem;
+    height: 0.5rem;
+    border-radius: 3.5rem;
+    background-color: rgb(31, 165, 218);
+    display: block !important; /* Force visibility */
 }
 
-/* Responsive Design */
+/* Make sure visibility works on all devices */
 @media (max-width: 1024px) { /* Tablets */
-  h2 {
-      font-size: clamp(1.6rem, 4vw, 2.5rem);
-      margin-top: -60px;
-  }
-
-  .separator::after {
-      width: 5rem;
-      height: 0.4rem;
-  }
+    h2 {
+        font-size: clamp(1.6rem, 4vw, 2.5rem);
+    }
 }
 
 @media (max-width: 768px) { /* Mobile devices */
-  h2 {
-      font-size: clamp(1.4rem, 4vw, 2.2rem);
-      margin-top: -40px;
-  }
+    h2 {
+        font-size: clamp(1.4rem, 4vw, 2.2rem);
+    }
 
-  .separator::after {
-      width: 4rem;
-      height: 0.35rem;
-  }
+    .separator {
+        align-self: center;
+    }
+
+    .separator::after {
+        width: 4rem;
+        height: 0.35rem;
+    }
 }
 
 @media (max-width: 480px) { /* Small screens (iPhones, small mobiles) */
-  h2 {
-      font-size: clamp(1.2rem, 4vw, 2rem);
-      margin-top: -30px;
-  }
+    h2 {
+        font-size: clamp(1.2rem, 4vw, 2rem);
+    }
 
-  .separator::after {
-      width: 3.5rem;
-      height: 0.3rem;
-  }
+    .separator::after {
+        width: 3.5rem;
+        height: 0.3rem;
+    }
 }
