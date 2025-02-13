@@ -747,6 +747,7 @@ footer span {
   .other-projects-box h2 {
     text-align: center;
     text-decoration: underline;
+    margin-top: 10px;
   }
 
   .notable-projects-box {
