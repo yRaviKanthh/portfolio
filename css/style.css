@@ -1132,3 +1132,80 @@ a {
 a:hover {
   color: lightgray; /* Adjust hover effect */
 }
+
+
+
+
+
+
+
+
+
+
+
+
+.featured-projects-box,
+.other-projects-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3.5rem;
+    padding-bottom: 10rem;
+    width: 90%; /* Makes it flexible on different screen sizes */
+    max-width: 1200px; /* Prevents it from getting too wide */
+    margin: 0 auto; /* Centers the box */
+}
+
+/* Ensures separator line does not extend */
+.other-projects-box .separator::after {
+    width: 0;
+}
+
+/* Adjusts heading position and styling */
+.other-projects-box h2 {
+    text-align: center;
+    text-decoration: underline;
+    margin-top: 15px; /* Moves heading slightly down */
+    font-size: 2rem; /* Responsive font size */
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) { /* Tablets */
+    .featured-projects-box,
+    .other-projects-box {
+        gap: 2rem;
+        padding-bottom: 8rem;
+    }
+
+    .other-projects-box h2 {
+        font-size: 1.8rem;
+        margin-top: 12px;
+    }
+}
+
+@media (max-width: 768px) { /* Mobile devices */
+    .featured-projects-box,
+    .other-projects-box {
+        gap: 1.5rem;
+        padding-bottom: 6rem;
+    }
+
+    .other-projects-box h2 {
+        font-size: 1.6rem;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 480px) { /* Small screens (iPhones, small mobiles) */
+    .featured-projects-box,
+    .other-projects-box {
+        gap: 1rem;
+        padding-bottom: 5rem;
+    }
+
+    .other-projects-box h2 {
+        font-size: 1.4rem;
+        margin-top: 8px;
+    }
+}
