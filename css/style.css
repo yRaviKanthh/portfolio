@@ -1220,24 +1220,24 @@ a:hover {
 
 h2 {
     margin: 0;
-    font-size: clamp(1.8rem, 4vw, 2.8rem); /* Adjusts size based on screen width */
+    font-size: clamp(1.8rem, 4vw, 2.8rem); /* Adjusts size dynamically */
     font-family: "Satoshi 700";
     text-align: left;
-    margin-top: -80px; /* Adjusted to be less negative for better positioning */
+    margin-top: 0; /* Removed negative margin */
 }
 
 /* Ensures consistent spacing and alignment */
 .separator {
     position: relative;
     align-self: flex-start;
-    margin-bottom: 10px;
+    margin-bottom: 15px; /* Increased for better spacing */
 }
 
 /* Underline effect for heading */
 .separator::after {
     content: "";
     position: absolute;
-    bottom: -8px; /* Moves line closer to text */
+    bottom: -5px; /* Moves line closer to text */
     left: 0;
     width: 6rem;
     height: 0.5rem;
@@ -1245,11 +1245,11 @@ h2 {
     background-color: rgb(31, 165, 218);
 }
 
-/* Responsive Design */
+/* Responsive Adjustments */
 @media (max-width: 1024px) { /* Tablets */
     h2 {
         font-size: clamp(1.6rem, 4vw, 2.5rem);
-        margin-top: -60px;
+        margin-top: 0;
     }
 
     .separator::after {
@@ -1261,19 +1261,24 @@ h2 {
 @media (max-width: 768px) { /* Mobile devices */
     h2 {
         font-size: clamp(1.4rem, 4vw, 2.2rem);
-        margin-top: -40px;
+        text-align: center; /* Centering for better readability */
+    }
+
+    .separator {
+        align-self: center; /* Center the separator */
     }
 
     .separator::after {
         width: 4rem;
         height: 0.35rem;
+        left: 50%;
+        transform: translateX(-50%); /* Center underline */
     }
 }
 
 @media (max-width: 480px) { /* Small screens (iPhones, small mobiles) */
     h2 {
         font-size: clamp(1.2rem, 4vw, 2rem);
-        margin-top: -30px;
     }
 
     .separator::after {
