@@ -750,6 +750,11 @@ footer span {
     margin-top: 10px;
   }
 
+  
+  .other-projects-box .separator {
+    padding-bottom: 15px; /* Adjust for more spacing */
+}
+
   .notable-projects-box {
     flex-flow: row wrap;
     justify-content: center;
