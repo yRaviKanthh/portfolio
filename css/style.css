@@ -1209,3 +1209,75 @@ a:hover {
         margin-top: 8px;
     }
 }
+
+
+
+
+
+
+
+
+
+h2 {
+    margin: 0;
+    font-size: clamp(1.8rem, 4vw, 2.8rem); /* Adjusts size based on screen width */
+    font-family: "Satoshi 700";
+    text-align: left;
+    margin-top: -80px; /* Adjusted to be less negative for better positioning */
+}
+
+/* Ensures consistent spacing and alignment */
+.separator {
+    position: relative;
+    align-self: flex-start;
+    margin-bottom: 10px;
+}
+
+/* Underline effect for heading */
+.separator::after {
+    content: "";
+    position: absolute;
+    bottom: -8px; /* Moves line closer to text */
+    left: 0;
+    width: 6rem;
+    height: 0.5rem;
+    border-radius: 3.5rem;
+    background-color: rgb(31, 165, 218);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) { /* Tablets */
+    h2 {
+        font-size: clamp(1.6rem, 4vw, 2.5rem);
+        margin-top: -60px;
+    }
+
+    .separator::after {
+        width: 5rem;
+        height: 0.4rem;
+    }
+}
+
+@media (max-width: 768px) { /* Mobile devices */
+    h2 {
+        font-size: clamp(1.4rem, 4vw, 2.2rem);
+        margin-top: -40px;
+    }
+
+    .separator::after {
+        width: 4rem;
+        height: 0.35rem;
+    }
+}
+
+@media (max-width: 480px) { /* Small screens (iPhones, small mobiles) */
+    h2 {
+        font-size: clamp(1.2rem, 4vw, 2rem);
+        margin-top: -30px;
+    }
+
+    .separator::after {
+        width: 3.5rem;
+        height: 0.3rem;
+    }
+}
