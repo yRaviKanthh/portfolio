@@ -57,7 +57,7 @@ h2 {
   font-size: clamp(1.8rem, 4vw, 2.8rem); /* Adjusts size based on screen width */
   font-family: "Satoshi 700";
   text-align: left; 
-  margin-top: -130px;/* Ensures it stays centered */
+  margin-top: -110px;/* Ensures it stays centered */
 }
 
 h3 {
@@ -382,7 +382,7 @@ main {
 .separator::after {
   content: "";
   position: absolute;
-  bottom: 8.2rem;
+  bottom: 6.5rem;
   left: 0;
   width: 5rem;
   height: 0.5rem;
