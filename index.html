@@ -30,17 +30,21 @@
     <link rel="stylesheet" href="./css/font-root-styles/satoshi.css" />
 
 <style>
+/* AI Agent → LEFT side */
 #ai-agent-container {
-  position: fixed;
-  bottom: 20px;
-  right: 24px;
-  z-index: 9999;
+    position: fixed;
+    bottom: 20px;
+    left: 24px;          /* move to left */
+    right: auto;
+    z-index: 9999;
 }
 
-/* Move Zoho up safely */
-#zsiq_float, 
+/* Zoho → RIGHT side (default, just ensure) */
+#zsiq_float,
 [id^="zsiq"] {
-  bottom: 160px !important;
+    right: 24px !important;
+    left: auto !important;
+    bottom: 20px !important;   /* reset if you changed earlier */
 }
 </style>
     
